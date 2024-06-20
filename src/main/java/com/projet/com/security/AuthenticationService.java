@@ -1,21 +1,16 @@
-package com.projet.com.controller;
+package com.projet.com.security;
 
 import com.projet.com.dto.AuthenticationRequest;
 import com.projet.com.dto.AuthenticationResponse;
 import com.projet.com.dto.RegisterRequest;
-import com.projet.com.entity.User;
-import com.projet.com.repository.UserRepository;
-import com.projet.com.security.JwtService;
-import com.projet.com.security.UserDetails;
+import com.projet.com.dao.entity.User;
+import com.projet.com.dao.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
-import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
@@ -45,13 +40,13 @@ public class AuthenticationService {
     public AuthenticationResponse authenticate(AuthenticationRequest request) {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
-                        request.getEmail(),
+                        request.getUsername(),
                         request.getPassword()
                 )
         );
 
 
-        var user = repository.findByUsername(request.getEmail()) // Utilisation de findByUsername
+        var user = repository.findByUsername(request.getUsername()) // Utilisation de findByUsername
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
 
         String jwtToken = jwtService.generateToken(UserDetails.build(user));

@@ -1,4 +1,4 @@
-package com.projet.com.entity;
+package com.projet.com.dao.entity;
 
 import org.springframework.security.core.GrantedAuthority;
 

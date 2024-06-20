@@ -1,10 +1,9 @@
-package com.projet.com.entity;
+package com.projet.com.dao.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import java.util.Date;
-import java.util.List;
 
 
 @Entity
@@ -18,10 +17,10 @@ import java.util.List;
         @GeneratedValue(strategy = GenerationType.AUTO)
         private Long id;
 
-        @Column(name = "montant", nullable = false, length = 0)
+        @com.projet.com.dao.entity.Column(name = "montant", nullable = false, length = 0)
         private Double montant;
 
-        @Column(name = "date_operation", nullable = false, length = 0)
+        @com.projet.com.dao.entity.Column(name = "date_operation", nullable = false, length = 0)
         private Date dateOperation;
        @Column(name = "description", nullable = false, length = 0)
     private String description ;

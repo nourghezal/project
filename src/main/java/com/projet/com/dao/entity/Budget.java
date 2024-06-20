@@ -1,4 +1,4 @@
-package com.projet.com.entity;
+package com.projet.com.dao.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -16,7 +16,7 @@ public class Budget {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "nom", nullable = false, length = 0)
+    @com.projet.com.dao.entity.Column(name = "nom", nullable = false, length = 0)
     private String nom;
 
     @Column(name = "montant_total", nullable = false, length = 0)

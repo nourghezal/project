@@ -1,4 +1,4 @@
-package com.projet.com.controller;
+package com.projet.com.dto;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,6 +1,6 @@
 package com.projet.com.config;
 
-import com.projet.com.controller.JwtUtils;
+import com.projet.com.utils.JwtUtils;
 import com.projet.com.security.JwtService;
 import com.projet.com.security.UserDetails;
 import jakarta.servlet.FilterChain;

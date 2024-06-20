@@ -1,8 +1,7 @@
-package com.projet.com.repository;
+package com.projet.com.dao.repository;
 
-import com.projet.com.entity.User;
+import com.projet.com.dao.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
@@ -10,7 +9,5 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByUsername(String username);
-
-    Optional<Object> findByEmail(String username);
 }
 

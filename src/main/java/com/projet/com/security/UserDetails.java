@@ -1,12 +1,11 @@
 package com.projet.com.security;
 
-import com.projet.com.entity.User;
+import com.projet.com.dao.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class UserDetails implements org.springframework.security.core.userdetails.UserDetails {
     private static final long serialVersionUID = 1L;

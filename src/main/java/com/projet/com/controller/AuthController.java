@@ -3,6 +3,7 @@ package com.projet.com.controller;
 import com.projet.com.dto.AuthenticationRequest;
 import com.projet.com.dto.AuthenticationResponse;
 import com.projet.com.dto.RegisterRequest;
+import com.projet.com.security.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,8 +25,5 @@ public class AuthController {
     public ResponseEntity<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest request) {
         return ResponseEntity.ok(authenticationService.authenticate(request));
     }
-
-  //  public ResponseEntity<?> authenticateUser(LoginRequest loginRequest) {
-   // }
 }
 

@@ -1,6 +1,6 @@
 package com.projet.com.dto;
 
-import com.projet.com.entity.Role;
+import com.projet.com.dao.entity.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

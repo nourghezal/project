@@ -1,4 +1,4 @@
-package com.projet.com.entity;
+package com.projet.com.dao.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -15,7 +15,7 @@ public class Categorie {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "libelle", nullable = false, length = 0)
+    @com.projet.com.dao.entity.Column(name = "libelle", nullable = false, length = 0)
     private String libelle;
     @Column(name = "description", nullable = false, length = 0)
     private String description;
